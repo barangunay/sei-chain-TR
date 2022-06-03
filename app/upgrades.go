@@ -19,9 +19,6 @@ func (app App) RegisterUpgradeHandlers() {
 	})
 
 	app.UpgradeKeeper.SetUpgradeHandler(IgniteCLIRemovalUpgradeHandler, func(ctx sdk.Context, plan upgradetypes.Plan, fromVM module.VersionMap) (module.VersionMap, error) {
-		delete(fromVM, "dex")
-		delete(fromVM, "epoch")
-
 		return app.mm.RunMigrations(ctx, app.configurator, fromVM)
 	})
 }
