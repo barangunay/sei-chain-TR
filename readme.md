@@ -1,53 +1,62 @@
-# Sei
+<h1 align="center">Sei Chain</h1>
 
-![Banner!](assets/SeiLogo.png)
+Ruesandora tarafından Türkçeleştirilmiştir.
 
-Sei Network is the first orderbook-specific L1 blockchain. The chain emphasizes reliability, security and high throughput above all else, enabling an entirely new echelon of ultra-high performance DeFi products built on top. Sei's on-chain CLOB and matching engine provides deep liquidity and price-time-priority matching for traders and apps. Apps built on Sei benefit from built-in orderbook infrastructure, deep liquidity, and a fully decentralized matching service. Users benefit from this exchange model with the ability to select price, size, and direction of their trades coupled with MEV protection.
+![image](https://user-images.githubusercontent.com/101149671/172205075-389cfada-4e27-4c83-b2c8-0311b79868fa.png)
 
-# seichain
-**seichain** is a blockchain built using Cosmos SDK and Tendermint. It is built using the Cosmos SDK and Tendermint core, and features a built-in central limit orderbook (CLOB) module. Decentralized applications building on Sei can build on top of the CLOB, and other Cosmos-based blockchains can leverage Sei's CLOB as a shared liquidity hub and create markets for any asset. Sei Shared Liquidity Model
+Sei Ağı, sipariş defterine özgü ilk L1 blok zinciridir. Zincir, her şeyden önce güvenilirliği, güvenliği ve yüksek verimi vurgulayarak, üstüne inşa edilmiş ultra yüksek performanslı DeFı ürünlerinin tamamen yeni bir kademesini mümkün kılıyor. Sei'nin zincir içi CLOB ve eşleştirme motoru, tüccarlar ve uygulamalar için derin likidite ve fiyat-zaman öncelikli eşleştirme sağlar. Seı üzerine kurulu uygulamalar, yerleşik sipariş defteri altyapısından, derin likiditeden ve tamamen merkezi olmayan bir eşleştirme hizmetinden yararlanır. Kullanıcılar, MEV koruması ile birlikte işlemlerinin fiyatını, boyutunu ve yönünü seçme yeteneği ile bu değişim modelinden yararlanır.
 
-Designed with developers and users in mind, Sei serves as the infrastructure and shared liquidity hub for the next generation of DeFi. Apps can easily plug-and-play to trade on Sei orderbook infrastructure and access pooled liquidity from other apps. To prioritize developer experience, Sei Network has integrated the wasmd module to support CosmWasm smart contracts.
+[Central limit order book (Clob) Nedir?](https://www.risk.net/definition/central-limit-order-book-clob)
+
+# Sei chain
+
+Sei Chain, Cosmos SDK ve Tender mint kullanılarak oluşturulmuş bir blockchain'dir. Cosmos SDK ve Tendermint çekirdeği kullanılarak oluşturulmuştur ve yerleşik bir merkezi limit sipariş defteri (CLOB) modülüne sahiptir. Sei'ye dayanan merkezi olmayan uygulamalar kulübün üzerine inşa edilebilir ve diğer Cosmos tabanlı blok zincirler, Sei'nin CLOB'UNU paylaşılan bir likidite merkezi olarak kullanabilir ve herhangi bir varlık için pazarlar oluşturabilir.
+
+[Cosmos SDK Nedir?](https://github.com/ruesandora/Cosmos-SDK-TR)
+
+Geliştiriciler ve kullanıcılar düşünülerek tasarlanan Sei, yeni nesil DeFı için altyapı ve paylaşılan likidite merkezi olarak hizmet vermektedir. Uygulamalar, Sei sipariş defteri altyapısında işlem yapmak ve diğer uygulamalardan havuzlanmış likiditeye erişmek için kolayca takılabilir ve oynatılabilir. Geliştirici deneyimine öncelik vermek için Sei Network, CosmWasm akıllı sözleşmelerini desteklemek üzere wsm modülünü entegre etti.
 
 ## Get started
 **How to validate on the Sei Testnet**
 *This is the Sei Testnet-1 (sei-testnet-1)*
 
-> Genesis [Published](https://github.com/sei-protocol/testnet/blob/main/sei-testnet-1/genesis.json)
+Yukarıda ki kısmı çevirmek istemedim.
+
+> Oluşum [Published](https://github.com/sei-protocol/testnet/blob/main/sei-testnet-1/genesis.json)
 
 > Peers [Published](https://github.com/sei-protocol/testnet/blob/main/sei-testnet-1/addrbook.json)
 
-## Hardware Requirements
+## Donanım Gereksinimleri:
 **Minimum**
 * 8 GB RAM
 * 100 GB NVME SSD
 * 3.2 GHz x4 CPU
 
-**Recommended**
+**Önerilen**
 * 16 GB RAM
 * 500 GB NVME SSD
 * 4.2 GHz x6 CPU 
 
-## Operating System 
+## İşletim sistemi:
 
-> Linux (x86_64) or Linux (amd64) Reccomended Arch Linux
+> Linux (x86_64) veya Linux (amd64) Önerilen Arch Linux
 
-**Dependencies**
-> Prerequisite: go1.18+ required.
+**Sürüm**
+> Ön koşul: go1.18+ gerekli.
 * Arch Linux: `pacman -S go`
 * Ubuntu: `sudo snap install go --classic`
 
-> Prerequisite: git. 
+> Ön koşul: git. 
 * Arch Linux: `pacman -S git`
 * Ubuntu: `sudo apt-get install git`
 
-> Optional requirement: GNU make. 
+> İsteğe bağlı gereksinim: GNU make. 
 * Arch Linux: `pacman -S make`
 * Ubuntu: `sudo apt-get install make`
 
-## Seid Installation Steps
+## Seid Kurulum Adımları
 
-**Clone git repository**
+**Git deposunu klonla**
 
 ```bash
 git clone https://github.com/sei-protocol/sei-chain
@@ -56,7 +65,7 @@ git checkout origin/1.0.1beta-upgrade
 make install
 mv $HOME/go/bin/seid /usr/bin/
 ```
-**Generate keys**
+**Anahtar oluştur**
 
 * `seid keys add [key_name]`
 
@@ -64,19 +73,19 @@ mv $HOME/go/bin/seid /usr/bin/
 
 * `seid keys add [key_name] --ledger` to generate keys with ledger device
 
-## Validator setup instructions
+## Doğrulayıcı kurulum talimatları:
 
-* Install seid binary
+* seid ikili dosyasını yükleyi
 
-* Initialize node: `seid init <moniker> --chain-id sei-testnet-1`
+* Düğümü başlat: `seid init <moniker> --chain-id sei-testnet-1`
 
-* Download the Genesis file: `https://github.com/sei-protocol/testnet/raw/main/sei-testnet-1/genesis.json -P $HOME/.sei/config/`
+* Genesis dosyasını indirin: `https://github.com/sei-protocol/testnet/raw/main/sei-testnet-1/genesis.json -P $HOME/.sei/config/`
  
-* Edit the minimum-gas-prices in ${HOME}/.sei/config/app.toml: `sed -i 's/minimum-gas-prices = ""/minimum-gas-prices = "0.01usei"/g' $HOME/.sei/config/app.toml`
+* Asgari gaz fiyatlarını düzenleyin in ${HOME}/.sei/config/app.toml: `sed -i 's/minimum-gas-prices = ""/minimum-gas-prices = "0.01usei"/g' $HOME/.sei/config/app.toml`
 
-* Start seid by creating a systemd service to run the node in the background
+* Düğümü arka planda çalıştırmak için bir systemd hizmeti oluşturarak seid'i başlatın
 `nano /etc/systemd/system/seid.service`
-> Copy and paste the following text into your service file. Be sure to edit as you see fit.
+> Aşağıdaki metni kopyalayıp servis dosyanıza yapıştırın. Uygun gördüğünüz gibi düzenlediğinizden emin olun.
 
 ```bash
 [Unit]
@@ -97,12 +106,12 @@ LimitMEMLOCK=209715200
 [Install]
 WantedBy=multi-user.target
 ```
-## Start the node
-* Reload the service files: `sudo systemctl daemon-reload` 
-* Create the symlinlk: `sudo systemctl enable seid.service` 
-* Start the node sudo: `systemctl start seid && journalctl -u seid -f`
+## düğümü başlat:
+* Servis dosyalarını yeniden yükleyin: `sudo systemctl daemon-reload` 
+* symlink'i oluştur: `sudo systemctl enable seid.service` 
+* sudo düğümünü başlat: `systemctl start seid && journalctl -u seid -f`
 
-### Create Validator Transaction
+### Doğrulayıcı İşlemi Oluştur
 ```bash
 seid tx staking create-validator \
 --from {{KEY_NAME}} \
@@ -119,4 +128,3 @@ seid tx staking create-validator \
 --amount <token delegation>usei \
 --node localhost:26657
 ```
-
