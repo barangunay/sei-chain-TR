@@ -1,8 +1,6 @@
 <h1 align="center">Sei Chain</h1>
 
-Ruesandora tarafından Türkçeleştirilmiştir.
-
-![image](https://user-images.githubusercontent.com/101149671/172205075-389cfada-4e27-4c83-b2c8-0311b79868fa.png)
+Barangunay tarafından Türkçeleştirilmiştir.
 
 Sei Ağı, sipariş defterine özgü ilk L1 blok zinciridir. Zincir, her şeyden önce güvenilirliği, güvenliği ve yüksek verimi vurgulayarak, üstüne inşa edilmiş ultra yüksek performanslı DeFı ürünlerinin tamamen yeni bir kademesini mümkün kılıyor. Sei'nin zincir içi CLOB ve eşleştirme motoru, tüccarlar ve uygulamalar için derin likidite ve fiyat-zaman öncelikli eşleştirme sağlar. Seı üzerine kurulu uygulamalar, yerleşik sipariş defteri altyapısından, derin likiditeden ve tamamen merkezi olmayan bir eşleştirme hizmetinden yararlanır. Kullanıcılar, MEV koruması ile birlikte işlemlerinin fiyatını, boyutunu ve yönünü seçme yeteneği ile bu değişim modelinden yararlanır.
 
@@ -38,9 +36,7 @@ Yukarıda ki kısmı çevirmek istemedim.
 * 4.2 GHz x6 CPU 
 
 ## İşletim sistemi:
-
 > Linux (x86_64) veya Linux (amd64) Önerilen Arch Linux
-
 **Sürüm**
 > Ön koşul: go1.18+ gerekli.
 * Arch Linux: `pacman -S go`
